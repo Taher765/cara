@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce website</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- scroll Up  --> <!-- انا عارف انها مش بتتعمل كدا بس لما ناخد BOM -->
+    <a href="#" class="scroll text-light">
+      <i class="fa-solid fa-angle-up text-light "></i>
+    </a>
+
+    <!-- ========== Start Navbar ============ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5">
+            <li class="nav-item">
+              <a class="nav-link active p-lg-3" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-lg-3" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="holder-icon position-absolute">
+          <i id="mode" class="fa-solid fa-moon"></i>
+          <span class="count fw-bold">0</span>
+          <i id="shopping" class="fa-solid fa-bag-shopping"></i>
+        </div>
+      </div>
+      <!-- ===== start menu ====== -->
+      <div class="menu-shopping position-absolute">
+        <div
+          class="close d-flex justify-content-center align-items-center ms-auto mb-3 rounded-pill"
+        >
+          <i class="fa-solid fa-close text-black"></i>
+        </div>
+        <div class="d-flex justify-content-between">
+          <h6 class="text-light">Item</h6>
+          <h6 class="text-light">Unit price</h6>
+          <h6 class="text-light">Units</h6>
+        </div>
+
+        <!-- Add To Cart -->
+        <div class="item">
+        </div>
+
+        <ul class="shopping-list list-unstyled mt-4 d-flex justify-content-center">
+          <li class="total text-light">Sub Total</li>
+          <li class="item text-light mx-1">( <span class="fw-bold">0</span> item ) :</li>
+          <li class="price fw-bold text-light">0.00</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ========== End Navbar ============ -->
+    <!-- ========== Start Landing ============ -->
+    <section class="landing vh-100 text-center text-lg-start">
+      <div class="container">
+        <div class="text d-flex flex-column justify-content-center vh-100">
+          <h4 class="fw-bold text-black">Trade-in-offer</h4>
+          <h1 class="text-black">Super value deals</h1>
+          <h2 class="my-4" id="element"></h2>
+          <p class="text-black-50">
+            Save more with coupons &amp; up to 70% off!
+          </p>
+          <div class="img-link position-relative d-block">
+            <img class=" " src="images/button.png" alt="" />
+            <a class="fw-bold position-absolute" href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End Landing ============ -->
+
+    <!-- ========== Start services ======= -->
+    <section class="services text-center py-5">
+      <div class="container">
+        <div
+          class="services-content overflow-hidden d-flex gap-4 justify-content-center flex-wrap align-items-center"
+        >
+          <div
+            class="wow animate__animated animate__backInLeft item box-border"
+          >
+            <img src="images/f1.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >Free Shopping</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInDown item box-border"
+          >
+            <img src="images/f2.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >Online Order</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInDown item box-border"
+          >
+            <img src="images/f3.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >Save Money</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInDown item box-border"
+          >
+            <img src="images/f4.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >Promotions</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInRight item box-border"
+          >
+            <img src="images/f5.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >Happy Sell</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInLeft item box-border"
+          >
+            <img src="images/f6.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >F24/7 Support</a
+            >
+          </div>
+          <div class="wow animate__animated animate__backInUp item box-border">
+            <img src="images/f6.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >F24/7 Support</a
+            >
+          </div>
+          <div class="wow animate__animated animate__backInUp item box-border">
+            <img src="images/f6.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >F24/7 Support</a
+            >
+          </div>
+          <div class="wow animate__animated animate__backInUp item box-border">
+            <img src="images/f6.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >F24/7 Support</a
+            >
+          </div>
+          <div
+            class="wow animate__animated animate__backInRight item box-border"
+          >
+            <img src="images/f6.png" alt="" />
+            <a href="#" class="btn d-block fw-bold w-100 p-1 my-2"
+              >F24/7 Support</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End services ======= -->
+    <!-- ============ Start products ========== -->
+    <section class="products py-5">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Products</h2>
+          <p>summer collenction new modern design</p>
+        </div>
+        <div class="row overflow-hidden">
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInLeft"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f1.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">50</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f1.jpg"
+                    data-price="50"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInDown"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f2.jpg" alt="" />
+              <div class="info">
+                <span>Nike</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">30.40</span>
+                  <i
+                    data-brand="Nike"
+                    data-name="shirt"
+                    data-src="images/f2.jpg"
+                    data-price="30.40"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInDown"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f3.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f3.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInRight"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f4.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f4.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInLeft"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f5.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f5.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInUp"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f6.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f6.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInUp"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f7.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f7.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 mb-4 wow animate__animated animate__backInRight"
+          >
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/f8.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="product-price fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/f8.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ End products ========== -->
+    <!-- ============= Strat repair services ============ -->
+    <section class="repair-services py-5">
+      <div class="container">
+        <div class="text-center">
+          <h3 class="text-light">Repair Services</h3>
+          <h2 class="text-light my-4">
+            Up To <span class="text-danger">70% Off</span> - All t-Shirts &amp;
+            Accessories
+          </h2>
+          <button class="btn py-2 px-4 fw-bold">Explore More</button>
+        </div>
+      </div>
+    </section>
+    <!-- ============= End repair services ============ -->
+    <!-- ============= Start New Arrivals // product-2 ============ -->
+    <section class="products py-5">
+      <div class="container">
+        <div class="section-title">
+          <h2>New Arrivals</h2>
+          <p>summer collenction new modern design</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n1.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n1.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n2.jpg" alt="" />
+              <div class="info">
+                <span class="">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n2.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n3.jpg" alt="" />
+              <div class="info">
+                <span>adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n3.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n4.jpg" alt="" />
+              <div class="info">
+                <span class="text-black-50">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n4.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n5.jpg" alt="" />
+              <div class="info">
+                <span class="text-black-50">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n5.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n6.jpg" alt="" />
+              <div class="info">
+                <span class="text-black-50">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n6.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n7.jpg" alt="" />
+              <div class="info">
+                <span class="text-black-50">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n7.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="box box-border">
+              <img class="img-fluid mb-3" src="images/n8.jpg" alt="" />
+              <div class="info">
+                <span class="text-black-50">adidas</span>
+                <h5 class="m-0">Shirt</h5>
+                <div class="icons-holder">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                <div
+                  class="buy d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold fs-5">29.99</span>
+                  <i
+                    data-brand="adidas"
+                    data-name="shirt"
+                    data-src="images/n8.jpg"
+                    data-price="29.99"
+                    class="cart fa-solid fa-cart-shopping rounded-pill d-flex align-items-center justify-content-center"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============= End New Arrivals  // product-2 ============ -->
+    <!-- =========== Strat Offers ========== -->
+    <section class="offers pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 box mb-5">
+            <div class="item">
+              <div class="px-4 py-5 text-light">
+                <span>Crazy deals</span>
+                <h2 class="text-light">buy 1 get 1 free</h2>
+                <p>The best classic dress is on sale at cara</p>
+                <a class="btn text-light" href="#">Learn More </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 box mb-5">
+            <div class="item">
+              <div class="px-4 py-5 text-light">
+                <span>Spring / Simmer</span>
+                <h2 class="text-light">upcomming season</h2>
+                <p>The best classic dress is on sale at cara</p>
+                <a class="btn text-light" href="#">Collection </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 box mb-4">
+            <div class="item">
+              <div class="px-4 py-5 text-light">
+                <h2 class="fw-bold text-light text-uppercase">seasonal sale</h2>
+                <p class="fw-bold m-0 text-danger">
+                  Winter Collection - 50% OFF
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 box mb-4">
+            <div class="item">
+              <div class="px-4 py-5 text-light">
+                <h2 class="fw-bold fs-3 text-light text-uppercase">
+                  new footwear collection
+                </h2>
+                <p class="fw-bold m-0 text-danger">
+                  Winter Collection - 50% OFF
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 box mb-4">
+            <div class="item">
+              <div class="px-4 py-5 text-light">
+                <h2 class="fw-bold fs-3 text-light text-uppercase">T-shirts</h2>
+                <p class="fw-bold m-0 text-danger">New Trendy Prints</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========== End Offers ========== -->
+
+    <!-- ========== Start Sign Up ======== -->
+    <section class="sign-up py-5">
+      <div class="container">
+        <div
+          class="content text-center text-lg-start d-flex flex-wrap justify-content-between align-items-center"
+        >
+          <div class="text">
+            <h2 class="text-light">Sign Up For Newsletters</h2>
+            <p class="text-white-50">
+              Get E-mail Updates About Our latest shop and
+              <span class="text-warning">Special offers.</span>
+            </p>
+          </div>
+          <form class="d-flex align-items-center">
+            <input
+              class="form-control"
+              type="email"
+              placeholder="Your Email Address"
+            />
+            <button class="text-light btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End Sign Up ======== -->
+
+    <!-- ========== Start Footer =========== -->
+    <footer class="pt-5 text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <img src="images/logo.png" alt="" />
+            <h4 class="my-3">Contact</h4>
+            <div class="contact d-flex align-items-center">
+              <h5 class="m-0 me-1">Address:</h5>
+              <span> 562 Wellingtom Road.Street 32</span>
+            </div>
+            <div class="contact d-flex align-items-center">
+              <h5 class="m-0 me-1">Phone:</h5>
+              <span> -012222365/(-9)0123456789</span>
+            </div>
+            <div class="contact d-flex align-items-center">
+              <h5 class="m-0 me-1">hours:</h5>
+              <span> 10:10 - 1800 . mon - sat </span>
+            </div>
+            <h4 class="my-3">Follow Us</h4>
+            <div class="holder-icons">
+              <a class="me-1" href="#"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a class="me-1" href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a class="me-1" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a class="me-1" href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h4 class="mb-3">About</h4>
+            <ul class="list-unstyled">
+              <li><a class="mt-2 d-block" href="#">About Us</a></li>
+              <li><a class="mt-2 d-block" href="#">Delivery</a></li>
+              <li><a class="mt-2 d-block" href="#">Privacy Policy </a></li>
+              <li><a class="mt-2 d-block" href="#">Terms</a></li>
+              <li><a class="mt-2 d-block" href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h4 class="mb-3">My Account</h4>
+            <ul class="list-unstyled">
+              <li><a class="mt-2 d-block" href="#">Sign In</a></li>
+              <li><a class="mt-2 d-block" href="#">view vart</a></li>
+              <li><a class="mt-2 d-block" href="#">My Wishlist </a></li>
+              <li><a class="mt-2 d-block" href="#">Track My Order</a></li>
+              <li><a class="mt-2 d-block" href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4 class="mb-3">install App</h4>
+            <p class="mb-3">From App Store or Google play</p>
+            <div
+              class="download d-flex gap-2 justify-content-center align-items-center"
+            >
+              <div class="app-store rounded">
+                <a href="#"
+                  ><img class="mw-100" src="images/app.jpg" alt=""
+                /></a>
+              </div>
+              <div class="google-play rounded">
+                <a href="#"
+                  ><img class="mw-100" src="images/play.jpg" alt=""
+                /></a>
+              </div>
+            </div>
+            <p class="mb-3">Secured Payment Gateways</p>
+            <a href="#"> <img class="mw-100" src="images/pay.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="copy text-center mt-3 py-4">&copy; Ecommerce Company</div>
+      </div>
+    </footer>
+    <!-- ========== End Footer =========== -->
+    <!-- =========== Start js files =========== -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
